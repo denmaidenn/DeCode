@@ -1,0 +1,102 @@
+/* - - BANNER - - */
+
+.topbar {
+    width: 100%;
+    background-color: #fdb02d;
+    height: 4.625rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topbar .logo {
+    font-size: 2rem;
+    font-family: "edo", sans-serif;
+    color: #952626;
+    text-decoration: none;
+}
+
+.topbar .logo2 {
+    font-size: 1.5rem;
+    font-family: "edo", sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* - - NAVIGATION - - */
+
+.navbar {
+    width: 100%;
+    height: 3.5rem;
+    margin: 0 auto;
+    /* z-index: 5;
+    top: 0;
+    position: sticky; */
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    justify-content: space-between;
+    background-color: #952626;
+    box-shadow: 0 10px 100px #00000066;
+    overflow: hidden;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2.5rem;
+    padding-left: 7vw;
+    text-transform: uppercase;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: flex;
+    transition: transform 0.1s ease;
+    color: #fff;
+}
+
+.navbar li a {
+    transition: transform 0.2s ease;
+    font-weight: 500;
+}
+
+.navbar li a:hover {
+    color: #fdb02d;
+    border-bottom: 2px solid #fdb02d;
+}
+
+.navbar li a:hover {
+    transform: scale(1.2);
+}
+
+li a:active {
+    color: rgb(229, 204, 170);
+}
+
+.action_btn {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #fdb02d;
+    padding: 0.625em 1.75em;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.navbar .action_btn {
+    margin-right: 3vw;
+}
+
+.navbar .action_btn:hover {
+    transform: scale(1.1);
+}
+
+.navbar .action_btn:active {
+    transform: scale(0.95);
+}

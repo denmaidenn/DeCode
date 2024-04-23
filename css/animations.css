@@ -1,0 +1,29 @@
+.slidefade {
+    position: relative;
+    animation: slidefade 1.1s;
+}
+
+@keyframes slidefade {
+    from {
+        bottom: -100px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+.fadeonly {
+    position: relative;
+    animation: fadeonly 0.8s;
+}
+
+@keyframes fadeonly {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
