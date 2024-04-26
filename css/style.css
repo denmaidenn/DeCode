@@ -1,230 +1,95 @@
-/*
-COLOR PALETTE:
-#1d190b
-#efece8
-#952626
-#fdb02d
-#a1c45a
-*/
+@import url(/src/output.css);
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Calistoga&family=League+Spartan:wght@100..900&display=swap');
+@import url(/fonts.css);
 
-
-
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
-@import url(swiper-bundle.min.css);
-@import url(animations.css);
-@import url(fonts.css);
-@import url(dropdown.css);
-@import url(topBars.css);
-@import url(menu.css);
-
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: #1d190b;
-    font-family: "Poppins";
-}
 
 body {
-    background-color: #efece8;
-    background-size: cover ;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-a {
-    text-decoration: none;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    height: 75vh;
-    padding: 0 8em;
-    background: linear-gradient(to bottom, rgba(69, 56, 43, 0.606), rgba(0, 0, 0, 0.413)), url(/assets/bgSate.jpg);
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    color: #fdb02d;
-}
-
-.hero h2 {
-    font-size: 1rem;
-    color: #fff;
-    font-weight: 300;
-    width: 45ch;
-}
-
-.dArrow {
-    padding: 0 77.5vh;
-    margin: 30rem 0 0;
-    position: absolute;
-}
-
-.grid-phemat {
-    display: grid;
-    justify-content: center;
-    padding-inline: 25em;
-    grid-template-areas:
-        "header header header header"
-        "paket1 paket2 paket3 paket4"
-}
-
-.paket1,
-.paket2,
-.paket3,
-.paket4 {
-    height: 13.75rem;
-    width: 20rem;
-    margin: 0 1rem 3rem;
-    border-radius: 25px;
-    background-color: #161212;
-    text-align: center;
-    background-position: center;
-    background-size: cover;
-}
-
-.sectionTitle {
-    grid-area: header;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.sectionTitle p {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.paket1 {
-    grid-area: paket1;
-    background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.671), rgba(69, 56, 43, 0.606)),
-    url(/assets/phemat1.jpg);
-}
-
-.paket1:hover {
-    background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.334), rgba(69, 56, 43, 0.606)),
-    url(/assets/phemat1.jpg);
-}
-
-.paket2 {
-    grid-area: paket2;
-    background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.671), rgba(69, 56, 43, 0.606)),
-    url(/assets/phemat2.jpg);
-}
-
-.paket2:hover {
-    background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.334), rgba(69, 56, 43, 0.606)),
-    url(/assets/phemat2.jpg);
-}
-
-.paket3 {
-    grid-area: paket3;
-    background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.671), rgba(69, 56, 43, 0.606)),
-    url(/assets/phemat3.jpg);
-    background-position: center;
-}
-
-.paket3:hover {
-    background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.334), rgba(69, 56, 43, 0.606)),
-    url(/assets/phemat3.jpg);
-}
-
-.paket4 {
-    grid-area: paket4;
-    background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.671), rgba(69, 56, 43, 0.606)),
-    url(/assets/phemat4.jpg);
-    background-position: center;
-}
-
-.paket4:hover {
-    background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.334), rgba(69, 56, 43, 0.606)),
-    url(/assets/phemat4.jpg);
-}
-
-.paket1 h1,
-.paket2 h1,
-.paket3 h1,
-.paket4 h1 {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
     font-size: 1.25rem;
-    color: #fff;
-    padding: 4rem 0 0;
-    font-weight: 500;
 }
 
-.paket1 p,
-.paket2 p,
-.paket3 p,
-.paket4 p {
-    font-size: 0.75rem;
-    line-height: 1.5rem;
-    color: #fff;
+* {
+    font-family: "League Spartan", sans-serif;
+    color: #000;
 }
 
-.menuLine {
-    width: 25px;
-    height: 2px;
-    background-color: #a1c45a;
-    margin: 0.5rem auto;
+.nav-dropdown {
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    max-height: 0;
 }
 
-.menuSatuanTabs {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 1rem 2rem;
+.nav-dropdown.hidden {
+    max-height: 500px;
 }
 
-.tabs {
-    background-color: #fff;
-    padding: 0.5rem;
-    border-radius: 20px;
-    font-size: 1rem;
-    margin: auto 0.5rem;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
+.nav-item>.active {
+    border-bottom: 2px #85A460 solid;
 }
 
-.tabs:hover {
-    filter: brightness(0.8);
+.nav-link:not(.active):hover {
+    border-bottom: 2px rgb(43, 43, 43) solid;
 }
 
-.tabActive {
-    background-color: #952626;
-    color: #fff;
+nav>*>a>img {
+    padding-left: 1rem;
 }
 
-.footer {
-    height: 50rem;
+.hero>.heroimg {
+    background-image: url(/assets/hero.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
+.hero>.herobanner {
+    background-color: #DEF6CC;
+}
 
-@media (max-width: 992px) {
-    .grid-phemat {
-        grid-template-areas:
-            "header header"
-            "paket1 paket1"
-            "paket2 paket2"
-            "paket3 paket3"
-            "paket4 paket4"
-            "footer footer";
-    }
+.herobanner>h1 {
+    font-family: "calistoga", sans-serif;
+}
 
-    .paket1,
-    .paket2,
-    .paket3,
-    .paket4 {
-        width: 85vw;
-        justify-content: center;
-        border-radius: 10px;
-        margin: 0 0 1.5rem;
+.herobanner>h2 {
+    font-family: "Caladea", sans-serif;
+    font-weight: bold;
+}
 
-    }
+.herobanner>p {
+    font-family: "League spartan", sans-serif;
+}
+
+.menucard {
+    justify-self: center;
+}
+
+.caladea {
+    font-family: "Caladea", sans-serif;
+    font-weight: bold;
+}
+
+.league {
+    font-family: "League Spartan", sans-serif;
+}
+
+.calistoga {
+    font-family: "Calistoga", sans-serif;
+}
+
+.circle {
+    clip-path: circle();
+}
+
+#signin {
+    z-index: 3;
+    display: none;
+    padding-block: 135px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    background-color: rgba(0, 0, 0, 0.4);
 }
